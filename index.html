@@ -213,19 +213,71 @@
     /* ORIGINAL MAAT LOGO - NO SUBSTITUTE */
 
     .brand {
-      display: flex;
-      align-items: center;
-      flex-shrink: 0;
-    }
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
 
-    .brand-logo {
-      width: 225px;
-      height: 68px;
-      object-fit: contain;
-      object-position: left center;
-      display: block;
-    }
+.brand-logo {
+  width: 225px;
+  height: 68px;
+  object-fit: contain;
+  display: block;
+}
 
+.brand-company {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  border-left: 2px solid #d5a33b;
+  padding-left: 18px;
+}
+
+.brand-company strong {
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
+}
+
+.brand-company span {
+  color: #d5a33b;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .brand {
+    gap: 9px;
+  }
+
+  .brand-logo {
+    width: 125px;
+    height: 52px;
+  }
+
+  .brand-company {
+    padding-left: 9px;
+    gap: 4px;
+  }
+
+  .brand-company strong {
+    font-size: 12px;
+    letter-spacing: 0.4px;
+  }
+
+  .brand-company span {
+    font-size: 9px;
+    white-space: normal;
+  }
+}
     .nav-links {
       display: flex;
       align-items: center;
@@ -1402,17 +1454,21 @@
   <header class="header site-header">
     <div class="container nav-container">
 
-      <a href="#home" class="brand" aria-label="VERTEX BUSINESS Home">
-        <img
-          src="./maat-logo.png"
-          alt="MAAT BUSINESS VERTEX Logo"
-          class="brand-logo"
-          width="225"
-          height="68"
-          fetchpriority="high"
-        >
-        <span><strong>MAT VERTEX BUSINESS</strong> | A MAAT VENTURES ENTERPRISE</span>
-      </a>
+      <a href="#home" class="brand" aria-label="MAAT VENTURES GROUP Home">
+  <img
+    src="./maat-logo.png"
+    alt="MAAT BUSINESS VERTEX Logo"
+    class="brand-logo"
+    width="225"
+    height="68"
+    fetchpriority="high"
+  >
+
+  <div class="brand-company">
+    <strong>MAAT VENTURES GROUP</strong>
+    <span>Hyderabad, Telangana, India</span>
+  </div>
+</a>
 
       <button
         class="menu-toggle"
