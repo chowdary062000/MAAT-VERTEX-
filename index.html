@@ -5,242 +5,910 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MAAT VERTEX BUSINESS PRIVATE LIMITED | Global Trading & Import/Export Solutions</title>
 <meta name="description" content="MAAT VERTEX BUSINESS PRIVATE LIMITED – Premier global trading, import, export, commodity sourcing and supply chain coordination.">
-<meta name="theme-color" content="#04090f">
+<meta name="theme-color" content="#0B0E12">
 <meta name="author" content="MAAT VERTEX BUSINESS PRIVATE LIMITED">
 <meta property="og:title" content="MAAT VERTEX BUSINESS PRIVATE LIMITED | Global Trading & Import/Export Solutions">
 <meta property="og:description" content="Premier global trading, import, export, commodity sourcing and supply chain coordination.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="./maat-logo.png">
 <link rel="icon" type="image/png" href="./maat-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --bg:#04090f;
-  --bg2:#07111d;
-  --card:rgba(255,255,255,.045);
-  --line:rgba(255,255,255,.09);
-  --ink:#eef4f8;
-  --muted:#9fb0c0;
-  --em:#10b981;
-  --em2:#3ee6a8;
-  --teal:#2dd4bf;
-  --sky:#4cc9f0;
-  --gold:#e3b658;
-  --gold-soft:#f3d9a4;
-  --rose:#ff6b81;
-  --font-h:'Manrope',sans-serif;
-  --font-b:'DM Sans',sans-serif;
+:root {
+  --bg: #0B0E12;
+  --bg2: #0F141C;
+  --bg3: #151B25;
+  --card: rgba(255, 255, 255, 0.03);
+  --card-hover: rgba(255, 255, 255, 0.06);
+  --line: rgba(255, 255, 255, 0.08);
+  --line-hover: rgba(229, 160, 32, 0.3);
+  --ink: #F0F4F8;
+  --muted: #94A3B8;
+  --em: #10B981;
+  --em2: #3EE6A8;
+  --teal: #2DD4BF;
+  --sky: #4CC9F0;
+  --gold: #E5A020;
+  --gold-soft: #F3D9A4;
+  --rose: #FF6B81;
+  --font-h: 'Manrope', sans-serif;
+  --font-b: 'DM Sans', sans-serif;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:110px}
-body{background:var(--bg);color:var(--ink);font-family:var(--font-b);line-height:1.7;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-img{max-width:100%}
-.container{width:min(1200px,calc(100% - 44px));margin:auto}
-.section{padding:100px 0;position:relative}
-.section-label{color:var(--gold);font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px}
-.section-title{font-family:var(--font-h);font-size:clamp(30px,4vw,46px);line-height:1.2;font-weight:800;max-width:780px}
-.section-title span{background:linear-gradient(120deg,var(--em2),var(--teal),var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent}
-.section-heading{max-width:760px;margin-bottom:45px}
-.section-heading.center{text-align:center;margin-left:auto;margin-right:auto}
-.section-heading.center .section-title{margin:auto}
-.section-heading>p{color:var(--muted);margin-top:16px}
 
-.aurora{position:absolute;border-radius:50%;filter:blur(90px);opacity:.16;pointer-events:none;z-index:0}
-.a-em{background:var(--em)}
-.a-sky{background:var(--sky)}
-.a-gold{background:var(--gold);opacity:.10}
-
-.btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;padding:14px 26px;border-radius:8px;font-weight:700;font-size:14px;transition:.35s cubic-bezier(.2,.8,.2,1);position:relative;overflow:hidden;border:1px solid transparent}
-.btn::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);transition:.6s}
-.btn:hover::after{left:130%}
-.btn-primary{background:linear-gradient(135deg,var(--em),var(--teal));color:#04121a;box-shadow:0 10px 30px rgba(16,185,129,.3)}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(16,185,129,.45)}
-.btn-outline{background:rgba(255,255,255,.04);color:var(--gold-soft);border-color:rgba(227,182,88,.5);backdrop-filter:blur(8px)}
-.btn-outline:hover{background:var(--gold);color:#131007;transform:translateY(-3px)}
-
-.ticker-bar{background:#02060b;border-bottom:1px solid var(--line);overflow:hidden;height:38px;display:flex;align-items:center;position:relative}
-.ticker-live{position:absolute;left:0;top:0;bottom:0;z-index:3;display:flex;align-items:center;gap:7px;padding:0 16px;background:linear-gradient(90deg,#02060b 82%,transparent);font-size:11px;font-weight:700;letter-spacing:1.5px;color:var(--em2)}
-.ticker-live .dot{width:8px;height:8px;border-radius:50%;background:var(--em);animation:pulse 1.4s infinite}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(16,185,129,.6)}50%{box-shadow:0 0 0 7px rgba(16,185,129,0)}}
-.ticker-track{display:flex;gap:44px;white-space:nowrap;animation:scroll 34s linear infinite;padding-left:150px}
-.ticker-track:hover{animation-play-state:paused}
-@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.tick{font-size:12px;color:var(--muted);font-weight:600}
-.tick b{color:var(--ink);margin-right:6px}
-.tick .up{color:var(--em2)}
-.tick .down{color:var(--rose)}
-
-.header{position:sticky;top:0;z-index:1000;background:rgba(4,9,15,.85);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);transition:.35s}
-.header.scrolled{background:rgba(4,9,15,.97);box-shadow:0 14px 40px rgba(0,0,0,.5)}
-.nav-container{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:25px}
-.brand{display:flex;align-items:center;gap:16px;flex-shrink:0}
-.brand-logo{width:150px;height:58px;object-fit:contain}
-.brand-company{display:flex;flex-direction:column;gap:2px;border-left:2px solid var(--gold);padding-left:15px;max-width:280px}
-.brand-company strong{font-size:15px;font-weight:800;letter-spacing:.8px;color:var(--ink);line-height:1.25}
-.brand-company span{color:var(--gold);font-size:10.5px;letter-spacing:.5px;font-weight:600}
-.nav-links{display:flex;align-items:center;gap:22px}
-.nav-links a{color:#cfd9e2;font-size:13px;font-weight:600;transition:.25s;position:relative}
-.nav-links a:not(.nav-contact)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:linear-gradient(90deg,var(--em),var(--teal));transition:.3s;border-radius:2px}
-.nav-links a:not(.nav-contact):hover::after{width:100%}
-.nav-links a:hover{color:var(--em2)}
-.nav-links .nav-contact{background:linear-gradient(135deg,var(--em),var(--teal));color:#04121a;padding:10px 18px;border-radius:8px;font-weight:700}
-.menu-toggle{display:none;background:transparent;color:white;border:1px solid var(--line);padding:8px 12px;font-size:22px;border-radius:8px}
-
-.hero{min-height:660px;position:relative;display:flex;align-items:center;overflow:hidden;background:
-  linear-gradient(100deg,rgba(3,7,13,.97) 32%,rgba(5,15,28,.78) 62%,rgba(5,15,28,.4)),
-  url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=2200&q=90') center/cover no-repeat}
-.hero .aurora{opacity:.22}
-.hero-content{position:relative;z-index:2;padding:90px 0;max-width:820px}
-.hero-label{color:var(--em2);font-size:12px;font-weight:700;letter-spacing:4px;margin-bottom:20px;animation:fadeUp .9s .1s ease both}
-.hero h1{font-family:var(--font-h);font-size:clamp(42px,6.2vw,74px);line-height:1.06;font-weight:800;letter-spacing:-1.5px;animation:fadeUp .9s .25s ease both}
-.hero h1 .hl{background:linear-gradient(120deg,var(--em2),var(--teal),var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero-content>p{max-width:640px;color:#c3ccda;font-size:16.5px;margin:24px 0 32px;animation:fadeUp .9s .4s ease both}
-.hero-buttons{display:flex;flex-wrap:wrap;gap:15px;animation:fadeUp .9s .55s ease both}
-.hero-bottom-text{color:var(--muted);font-size:12px;letter-spacing:1.5px;margin-top:52px;animation:fadeUp .9s .7s ease both}
-.hero-bottom-text span{color:var(--gold-soft);font-weight:700}
-@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
-
-.stats-section{background:linear-gradient(180deg,var(--bg2),#050d18);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-.stat-card{text-align:center;padding:36px 15px;border-right:1px solid var(--line)}
-.stat-card:last-child{border:0}
-.stat-card h2{background:linear-gradient(120deg,var(--em2),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent;font-family:var(--font-h);font-size:38px;font-weight:800}
-.stat-card p{color:var(--muted);font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;margin-top:6px}
-.stats-note{text-align:center;color:var(--muted);font-size:10px;padding:0 15px 14px}
-
-.about-grid{display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:stretch}
-.about-media{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);min-height:440px;box-shadow:0 25px 60px rgba(0,0,0,.45)}
-.about-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.6s}
-.about-media:hover img{transform:scale(1.06)}
-.about-media::after{content:"";position:absolute;inset:14px;border:1px solid rgba(62,230,168,.4);border-radius:10px;pointer-events:none;z-index:1}
-.about-image-caption{position:absolute;z-index:2;bottom:0;left:0;right:0;padding:20px 24px;background:linear-gradient(0deg,rgba(3,8,14,.95),transparent);display:flex;flex-direction:column;gap:2px}
-.about-image-caption span{font-size:10px;letter-spacing:2px;font-weight:700;color:var(--em2)}
-.about-image-caption strong{font-family:var(--font-h);font-size:16px;color:var(--ink)}
-.about-content{display:flex;flex-direction:column;justify-content:center}
-.about-content>p{color:var(--muted);margin-top:18px}
-.check-list{list-style:none;margin:24px 0 30px}
-.check-list li{padding:11px 0;border-bottom:1px solid var(--line);color:#dbe2ec}
-.check-list li::before{content:"✓";color:var(--em);font-weight:800;margin-right:12px}
-
-.services-section{background:var(--bg2)}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.service-card{position:relative;overflow:hidden;min-height:280px;padding:30px;background:var(--card);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:16px;transition:.4s cubic-bezier(.2,.8,.2,1)}
-.service-card::before{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--em),var(--teal),var(--sky));transform:scaleX(0);transform-origin:left;transition:.45s}
-.service-card:hover{transform:translateY(-8px);border-color:rgba(16,185,129,.4);background:rgba(16,185,129,.05);box-shadow:0 22px 50px rgba(0,0,0,.45)}
-.service-card:hover::before{transform:scaleX(1)}
-.service-icon{width:54px;height:54px;display:grid;place-items:center;font-size:26px;border-radius:12px;background:linear-gradient(135deg,rgba(16,185,129,.2),rgba(45,212,191,.05));border:1px solid rgba(16,185,129,.35);margin-bottom:18px;transition:.4s}
-.service-card:hover .service-icon{transform:rotate(-8deg) scale(1.08)}
-.service-number{position:absolute;right:24px;top:24px;color:rgba(62,230,168,.25);font-family:var(--font-h);font-size:26px;font-weight:800}
-.service-card h3{font-family:var(--font-h);font-size:19px;margin-bottom:10px}
-.service-card p{color:var(--muted);font-size:13.5px}
-.service-card a{display:inline-block;margin-top:18px;color:var(--em2);font-size:13px;font-weight:700;transition:.3s}
-.service-card a:hover{letter-spacing:.5px}
-
-.trade-section{padding:100px 0;position:relative;overflow:hidden;background:linear-gradient(100deg,rgba(4,9,15,.96),rgba(6,16,30,.82)),url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1800&q=85') center/cover}
-.trade-content{max-width:880px;position:relative;z-index:2}
-.trade-content>p{color:#c3ccda;max-width:700px;margin:20px 0 32px}
-.corridor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
-.corridor-card{padding:24px;background:rgba(6,12,22,.7);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.14);border-radius:14px;transition:.35s}
-.corridor-card:hover{border-color:var(--em);transform:translateY(-6px);background:rgba(16,185,129,.08)}
-.corridor-card strong{display:block;color:var(--em2);font-family:var(--font-h);font-size:17px;letter-spacing:1px}
-.corridor-card span{color:#c3ccda;font-size:12.5px}
-
-.calculator-section{background:var(--bg2)}
-.calculator-box{max-width:860px;margin:0 auto;padding:38px;background:linear-gradient(150deg,#0e2236,#081422);border:1px solid rgba(16,185,129,.3);border-radius:20px;box-shadow:0 30px 70px rgba(0,0,0,.5)}
-.calculator-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px}
-.form-group label{display:block;color:var(--muted);font-size:12px;margin-bottom:8px;letter-spacing:.5px}
-.form-group input,.form-group select{width:100%;padding:14px;background:#050d17;border:1px solid var(--line);border-radius:10px;color:white;outline:none;transition:.25s}
-.form-group input:focus{border-color:var(--em);box-shadow:0 0 0 3px rgba(16,185,129,.18)}
-.calculator-result{margin-top:26px;padding:24px;background:#050d17;border-left:3px solid var(--em);border-radius:0 12px 12px 0}
-.calculator-result>span{display:block;color:var(--muted);font-size:13px}
-.calculator-result>strong{display:block;background:linear-gradient(120deg,var(--em2),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent;font-family:var(--font-h);font-size:32px;margin:6px 0;transition:.3s}
-.calculation-row{display:flex;justify-content:space-between;gap:18px;padding:6px 0;color:var(--muted);font-size:13px}
-.calculation-row strong{color:#e7edf5}
-.calculation-total{border-top:1px solid var(--line);margin-top:10px;padding-top:14px}
-.legal-note{font-size:11px;color:var(--muted);margin-top:18px;line-height:1.7}
-
-.faq-list{max-width:850px;margin:40px auto 0}
-.faq-list details{border-bottom:1px solid var(--line)}
-.faq-list summary{list-style:none;cursor:pointer;padding:20px 35px 20px 0;font-weight:700;position:relative;transition:.25s}
-.faq-list summary::-webkit-details-marker{display:none}
-.faq-list summary:hover{color:var(--em2)}
-.faq-list summary::after{content:"+";position:absolute;right:6px;color:var(--em);font-size:22px;top:16px;transition:.3s}
-.faq-list details[open] summary::after{transform:rotate(45deg)}
-.faq-list details p{color:var(--muted);font-size:14px;padding:0 30px 20px 0}
-
-.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:32px;margin-top:45px}
-.contact-info,.contact-form{padding:32px;background:var(--card);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:18px}
-.contact-info h3,.contact-form h3{font-family:var(--font-h);font-size:21px;margin-bottom:12px}
-.contact-info>p{color:var(--muted);font-size:13px;margin-bottom:22px}
-.contact-line{padding:16px 0;border-bottom:1px solid var(--line);color:#dbe2ec;font-size:13px;overflow-wrap:anywhere}
-.contact-line b{display:block;color:var(--em2);font-size:11px;letter-spacing:1.5px;margin-bottom:6px}
-.contact-line a:hover{color:var(--gold-soft)}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-.field.full{grid-column:1/-1}
-.field label{display:block;color:var(--muted);font-size:12px;margin-bottom:7px}
-.field input,.field select,.field textarea{width:100%;padding:13px;background:#050d17;border:1px solid var(--line);border-radius:10px;color:white;outline:none;transition:.25s}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--em);box-shadow:0 0 0 3px rgba(16,185,129,.18)}
-.field textarea{min-height:130px;resize:vertical}
-.form-note{color:var(--muted);font-size:11px;margin-top:12px}
-.form-status{margin-top:14px;color:var(--em2);font-size:13px}
-
-.footer{background:#02060b;border-top:1px solid var(--line);padding:65px 0 20px}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:35px}
-.footer-brand p{color:var(--muted);font-size:13px;max-width:320px;margin-top:18px}
-.footer-grid h4{font-family:var(--font-h);color:var(--gold-soft);font-size:14px;margin-bottom:16px}
-.footer-grid>div>a:not(.brand){display:block;color:var(--muted);font-size:13px;margin:10px 0;transition:.25s}
-.footer-grid>div>a:not(.brand):hover{color:var(--em2);padding-left:5px}
-.footer-bottom{border-top:1px solid var(--line);margin-top:45px;padding-top:18px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:var(--muted);font-size:11px}
-
-.back-top{position:fixed;right:22px;bottom:22px;width:46px;height:46px;background:linear-gradient(135deg,var(--em),var(--teal));color:#04121a;border:0;border-radius:12px;font-size:20px;z-index:999;opacity:0;visibility:hidden;transform:translateY(12px);transition:.35s;box-shadow:0 10px 26px rgba(16,185,129,.4)}
-.back-top.show{opacity:1;visibility:visible;transform:translateY(0)}
-.back-top:hover{transform:translateY(-4px)}
-
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-
-@media(max-width:980px){
-  .brand-logo{width:120px}
-  .brand-company{max-width:220px}
-  .brand-company strong{font-size:13px}
-  .nav-links{gap:12px}
-  .nav-links a{font-size:12px}
-  .services-grid{grid-template-columns:repeat(2,1fr)}
-  .footer-grid{grid-template-columns:repeat(2,1fr)}
-  .about-grid{gap:40px}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-b);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
-@media(max-width:740px){
-  .container{width:calc(100% - 32px)}
-  .menu-toggle{display:block}
-  .nav-links{display:none;position:absolute;top:82px;left:0;right:0;background:#04090f;padding:15px 24px 22px;flex-direction:column;align-items:stretch;border-top:1px solid var(--line)}
-  .nav-links.active{display:flex}
-  .nav-links a{padding:11px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px}
-  .nav-links .nav-contact{border:0;padding:11px 14px;margin-top:10px;text-align:center;border-radius:8px}
-  .stats-grid{grid-template-columns:repeat(2,1fr)}
-  .stat-card:nth-child(2){border-right:0}
-  .about-grid,.contact-grid{grid-template-columns:1fr}
-  .about-media{min-height:320px}
-  .corridor-grid{grid-template-columns:1fr}
-  .section{padding:70px 0}
+
+/* Premium Noise Overlay for Glassmorphism Depth */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
 }
-@media(max-width:480px){
-  .services-grid,.calculator-grid,.form-grid,.footer-grid{grid-template-columns:1fr}
-  .hero h1{font-size:38px}
-  .calculator-box{padding:24px}
-  .brand-company{max-width:160px}
-  .brand-company strong{font-size:11.5px}
-  .brand-company span{font-size:9px}
+
+a { color: inherit; text-decoration: none; transition: color 0.3s var(--ease); }
+img { max-width: 100%; display: block; }
+.container { width: min(1200px, calc(100% - 48px)); margin: auto; }
+.section { padding: 110px 0; position: relative; }
+
+/* Typography */
+.section-label {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  .reveal{opacity:1;transform:none}
+.section-label::before {
+  content: "";
+  width: 24px;
+  height: 2px;
+  background: var(--gold);
+  display: block;
+}
+.section-title {
+  font-family: var(--font-h);
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.15;
+  font-weight: 800;
+  max-width: 800px;
+  letter-spacing: -0.02em;
+}
+.section-title span {
+  background: linear-gradient(120deg, var(--em2), var(--teal), var(--sky));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.section-title span.gold {
+  background: linear-gradient(120deg, var(--gold), var(--gold-soft));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.section-heading { max-width: 760px; margin-bottom: 50px; }
+.section-heading.center { text-align: center; margin-left: auto; margin-right: auto; }
+.section-heading.center .section-title { margin: auto; }
+.section-heading.center .section-label { justify-content: center; }
+.section-heading.center .section-label::before { display: none; }
+.section-heading > p { color: var(--muted); margin-top: 18px; font-size: 17px; }
+
+/* Aurora Backgrounds */
+.aurora {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+  animation: drift 20s infinite alternate ease-in-out;
+}
+.a-em { background: var(--em); }
+.a-sky { background: var(--sky); }
+.a-gold { background: var(--gold); opacity: 0.12; }
+@keyframes drift {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(30px, -40px) scale(1.1); }
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 28px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.4s var(--ease);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-family: var(--font-h);
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+  transform: skewX(-20deg);
+  transition: 0.6s;
+}
+.btn:hover::after { left: 130%; }
+.btn-primary {
+  background: linear-gradient(135deg, var(--em), var(--teal));
+  color: #04121A;
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.25);
+}
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(16, 185, 129, 0.4);
+}
+.btn-outline {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--gold-soft);
+  border-color: rgba(229, 160, 32, 0.4);
+  backdrop-filter: blur(10px);
+}
+.btn-outline:hover {
+  background: var(--gold);
+  color: #0B0E12;
+  border-color: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(229, 160, 32, 0.25);
+}
+
+/* Scroll Progress */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--em2));
+  z-index: 10000;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+/* Ticker */
+.ticker-bar {
+  background: #070A0E;
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.ticker-live {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 20px;
+  background: linear-gradient(90deg, #070A0E 85%, transparent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--em2);
+}
+.ticker-live .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--em);
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+  50% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+}
+.ticker-track {
+  display: flex;
+  gap: 50px;
+  white-space: nowrap;
+  animation: scroll 40s linear infinite;
+  padding-left: 160px;
+}
+.ticker-track:hover { animation-play-state: paused; }
+@keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.tick { font-size: 12px; color: var(--muted); font-weight: 600; display: flex; align-items: center; gap: 6px; }
+.tick b { color: var(--ink); font-weight: 700; }
+.tick .up { color: var(--em2); }
+.tick .down { color: var(--rose); }
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(11, 14, 18, 0.7);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--line);
+  transition: all 0.4s var(--ease);
+}
+.header.scrolled {
+  background: rgba(11, 14, 18, 0.95);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  border-bottom-color: rgba(229, 160, 32, 0.15);
+}
+.nav-container { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 25px; }
+.brand { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+.brand-logo { width: 140px; height: 54px; object-fit: contain; }
+.brand-company {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-left: 2px solid var(--gold);
+  padding-left: 16px;
+  max-width: 260px;
+}
+.brand-company strong {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--ink);
+  line-height: 1.25;
+}
+.brand-company span { color: var(--gold); font-size: 10px; letter-spacing: 1px; font-weight: 600; text-transform: uppercase; }
+
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links a {
+  color: #CBD5E1;
+  font-size: 13.5px;
+  font-weight: 600;
+  transition: 0.3s var(--ease);
+  position: relative;
+}
+.nav-links a:not(.nav-contact)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-soft));
+  transition: 0.3s var(--ease);
+  border-radius: 2px;
+}
+.nav-links a:not(.nav-contact):hover { color: var(--gold-soft); }
+.nav-links a:not(.nav-contact):hover::after { width: 100%; }
+.nav-links .nav-contact {
+  background: linear-gradient(135deg, var(--gold), #D4941A);
+  color: #0B0E12;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  box-shadow: 0 4px 15px rgba(229, 160, 32, 0.2);
+}
+.nav-links .nav-contact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(229, 160, 32, 0.35);
+  color: #0B0E12;
+}
+.nav-links .nav-contact::after { display: none; }
+.menu-toggle {
+  display: none;
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  padding: 8px 12px;
+  font-size: 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.menu-toggle:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Hero */
+.hero {
+  min-height: 700px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(100deg, rgba(11,14,18,0.98) 30%, rgba(11,14,18,0.75) 60%, rgba(11,14,18,0.4)),
+              url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=2200&q=90') center/cover no-repeat;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 30%, rgba(229, 160, 32, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero-content { position: relative; z-index: 2; padding: 100px 0; max-width: 850px; }
+.hero-label {
+  color: var(--em2);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 24px;
+  animation: fadeUp 0.9s 0.1s var(--ease) both;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero-label::before { content: ""; width: 30px; height: 2px; background: var(--em2); }
+.hero h1 {
+  font-family: var(--font-h);
+  font-size: clamp(44px, 6.5vw, 78px);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  animation: fadeUp 0.9s 0.25s var(--ease) both;
+}
+.hero h1 .hl {
+  background: linear-gradient(120deg, var(--gold), var(--gold-soft), var(--em2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero-content > p {
+  max-width: 620px;
+  color: #CBD5E1;
+  font-size: 18px;
+  margin: 28px 0 36px;
+  animation: fadeUp 0.9s 0.4s var(--ease) both;
+  line-height: 1.7;
+}
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 16px; animation: fadeUp 0.9s 0.55s var(--ease) both; }
+.hero-bottom-text {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-top: 60px;
+  animation: fadeUp 0.9s 0.7s var(--ease) both;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hero-bottom-text span { color: var(--gold); font-weight: 700; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Stats */
+.stats-section {
+  background: linear-gradient(180deg, var(--bg2), #0A0D12);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); position: relative; z-index: 2; }
+.stat-card {
+  text-align: center;
+  padding: 40px 15px;
+  border-right: 1px solid var(--line);
+  transition: 0.4s var(--ease);
+}
+.stat-card:last-child { border-right: 0; }
+.stat-card:hover { background: rgba(255,255,255,0.02); }
+.stat-card h2 {
+  background: linear-gradient(120deg, var(--gold), var(--gold-soft));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: var(--font-h);
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.stat-card p { color: var(--muted); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
+.stats-note { text-align: center; color: var(--muted); font-size: 11px; padding: 16px 15px 20px; font-style: italic; }
+
+/* About */
+.about-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 60px; align-items: stretch; }
+.about-media {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  min-height: 460px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  transition: 0.5s var(--ease);
+}
+.about-media:hover { border-color: var(--line-hover); transform: translateY(-5px); }
+.about-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: 0.8s var(--ease); }
+.about-media:hover img { transform: scale(1.05); }
+.about-media::after {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  border: 1px solid rgba(229, 160, 32, 0.25);
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: 1;
+}
+.about-image-caption {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 28px;
+  background: linear-gradient(0deg, rgba(11,14,18,0.95) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.about-image-caption span { font-size: 11px; letter-spacing: 2.5px; font-weight: 700; color: var(--em2); }
+.about-image-caption strong { font-family: var(--font-h); font-size: 18px; color: var(--ink); }
+.about-content { display: flex; flex-direction: column; justify-content: center; }
+.about-content > p { color: var(--muted); margin-top: 20px; font-size: 16px; }
+.check-list { list-style: none; margin: 28px 0 34px; }
+.check-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  color: #E2E8F0;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+.check-list li:hover { padding-left: 8px; color: var(--gold-soft); }
+.check-list li::before {
+  content: "✓";
+  color: var(--em);
+  font-weight: 800;
+  margin-right: 14px;
+  font-size: 16px;
+  background: rgba(16, 185, 129, 0.1);
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Services */
+.services-section { background: var(--bg2); }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.service-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  padding: 34px;
+  background: var(--card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  transition: 0.45s var(--ease);
+  display: flex;
+  flex-direction: column;
+}
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--em2), var(--teal));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.5s var(--ease);
+}
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--line-hover);
+  background: var(--card-hover);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(229, 160, 32, 0.05);
+}
+.service-card:hover::before { transform: scaleX(1); }
+.service-icon {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(229, 160, 32, 0.15), rgba(229, 160, 32, 0.02));
+  border: 1px solid rgba(229, 160, 32, 0.25);
+  margin-bottom: 22px;
+  transition: 0.4s var(--ease);
+}
+.service-card:hover .service-icon {
+  transform: rotate(-5deg) scale(1.1);
+  background: linear-gradient(135deg, rgba(229, 160, 32, 0.25), rgba(229, 160, 32, 0.05));
+  border-color: var(--gold);
+}
+.service-number {
+  position: absolute;
+  right: 28px;
+  top: 28px;
+  color: rgba(229, 160, 32, 0.15);
+  font-family: var(--font-h);
+  font-size: 28px;
+  font-weight: 800;
+  transition: 0.4s;
+}
+.service-card:hover .service-number { color: rgba(229, 160, 32, 0.3); transform: scale(1.1); }
+.service-card h3 { font-family: var(--font-h); font-size: 20px; margin-bottom: 12px; color: var(--ink); }
+.service-card p { color: var(--muted); font-size: 14px; line-height: 1.6; flex-grow: 1; }
+.service-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 22px;
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.service-card a:hover { gap: 10px; color: var(--gold-soft); }
+
+/* Trade / Markets */
+.trade-section {
+  padding: 110px 0;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(100deg, rgba(11,14,18,0.97), rgba(15,20,28,0.85)),
+              url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1800&q=85') center/cover;
+}
+.trade-content { max-width: 900px; position: relative; z-index: 2; }
+.trade-content > p { color: #CBD5E1; max-width: 720px; margin: 20px 0 36px; font-size: 17px; }
+.corridor-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 36px; }
+.corridor-card {
+  padding: 28px;
+  background: rgba(11, 14, 18, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  transition: 0.4s var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+.corridor-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(229, 160, 32, 0.1), transparent);
+  opacity: 0;
+  transition: 0.4s;
+}
+.corridor-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+.corridor-card:hover::before { opacity: 1; }
+.corridor-card strong {
+  display: block;
+  color: var(--gold);
+  font-family: var(--font-h);
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+}
+.corridor-card span { color: #CBD5E1; font-size: 13px; position: relative; z-index: 1; line-height: 1.5; }
+
+/* Calculator */
+.calculator-section { background: var(--bg2); }
+.calculator-box {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 42px;
+  background: linear-gradient(150deg, #131A24, #0D121A);
+  border: 1px solid rgba(229, 160, 32, 0.2);
+  border-radius: 24px;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+.calculator-box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 400px;
+  height: 400px;
+  background: var(--gold);
+  filter: blur(120px);
+  opacity: 0.05;
+  pointer-events: none;
+}
+.calculator-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 28px; position: relative; z-index: 1; }
+.form-group label { display: block; color: var(--muted); font-size: 12px; margin-bottom: 8px; letter-spacing: 0.5px; font-weight: 600; text-transform: uppercase; }
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--ink);
+  outline: none;
+  transition: 0.3s var(--ease);
+  font-family: var(--font-b);
+  font-size: 15px;
+}
+.form-group input:focus, .form-group select:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(229, 160, 32, 0.15);
+  background: rgba(0, 0, 0, 0.5);
+}
+.calculator-result {
+  margin-top: 30px;
+  padding: 28px;
+  background: rgba(0, 0, 0, 0.3);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 14px 14px 0;
+  position: relative;
+  z-index: 1;
+}
+.calculator-result > span { display: block; color: var(--muted); font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+.calculator-result > strong {
+  display: block;
+  background: linear-gradient(120deg, var(--gold), var(--gold-soft));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: var(--font-h);
+  font-size: 36px;
+  margin: 8px 0 20px;
+  transition: 0.3s;
+}
+.calculation-row { display: flex; justify-content: space-between; gap: 18px; padding: 8px 0; color: var(--muted); font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.04); }
+.calculation-row:last-child { border-bottom: 0; }
+.calculation-row strong { color: var(--ink); font-weight: 600; }
+.calculation-total { border-top: 1px solid var(--line); margin-top: 12px; padding-top: 16px; }
+.calculation-total strong { color: var(--gold) !important; font-size: 16px; }
+
+/* Visual Bar for Calculator */
+.cost-bar-container { margin-top: 20px; height: 12px; background: rgba(255,255,255,0.05); border-radius: 6px; overflow: hidden; display: flex; }
+.cost-bar-segment { height: 100%; transition: width 0.6s var(--ease); }
+.cost-bar-base { background: var(--em); }
+.cost-bar-duty { background: var(--gold); }
+.cost-bar-freight { background: var(--sky); }
+.cost-bar-legend { display: flex; gap: 20px; margin-top: 12px; font-size: 12px; color: var(--muted); }
+.cost-bar-legend span { display: flex; align-items: center; gap: 6px; }
+.cost-bar-legend i { width: 10px; height: 10px; border-radius: 3px; display: block; }
+
+.legal-note { font-size: 12px; color: var(--muted); margin-top: 20px; line-height: 1.6; position: relative; z-index: 1; }
+
+/* FAQ */
+.faq-list { max-width: 850px; margin: 40px auto 0; }
+.faq-list details {
+  border-bottom: 1px solid var(--line);
+  transition: 0.3s;
+}
+.faq-list details[open] { background: rgba(255,255,255,0.02); border-radius: 12px; border-bottom-color: transparent; margin-bottom: 12px; }
+.faq-list summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 22px 40px 22px 0;
+  font-weight: 700;
+  font-size: 16px;
+  position: relative;
+  transition: 0.3s;
+  color: var(--ink);
+}
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary:hover { color: var(--gold); }
+.faq-list summary::after {
+  content: "+";
+  position: absolute;
+  right: 6px;
+  color: var(--gold);
+  font-size: 24px;
+  top: 16px;
+  transition: 0.4s var(--ease);
+  font-weight: 300;
+}
+.faq-list details[open] summary::after { transform: rotate(45deg); }
+.faq-list details p { color: var(--muted); font-size: 15px; padding: 0 30px 24px 0; line-height: 1.7; }
+
+/* Contact */
+.contact-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 36px; margin-top: 50px; }
+.contact-info, .contact-form {
+  padding: 36px;
+  background: var(--card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  transition: 0.4s;
+}
+.contact-info:hover, .contact-form:hover { border-color: var(--line-hover); }
+.contact-info h3, .contact-form h3 { font-family: var(--font-h); font-size: 22px; margin-bottom: 14px; color: var(--ink); }
+.contact-info > p { color: var(--muted); font-size: 14px; margin-bottom: 26px; line-height: 1.6; }
+.contact-line {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+  color: #E2E8F0;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.contact-line:last-child { border-bottom: 0; }
+.contact-line b { color: var(--gold); font-size: 11px; letter-spacing: 1.5px; font-weight: 700; text-transform: uppercase; }
+.contact-line a:hover { color: var(--gold-soft); }
+
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.field.full { grid-column: 1 / -1; }
+.field label { display: block; color: var(--muted); font-size: 12px; margin-bottom: 8px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
+.field input, .field select, .field textarea {
+  width: 100%;
+  padding: 14px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--ink);
+  outline: none;
+  transition: 0.3s var(--ease);
+  font-family: var(--font-b);
+  font-size: 14px;
+}
+.field input:focus, .field select:focus, .field textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(229, 160, 32, 0.15);
+}
+.field textarea { min-height: 140px; resize: vertical; }
+.form-note { color: var(--muted); font-size: 12px; margin-top: 14px; display: flex; align-items: center; gap: 8px; }
+.form-note::before { content: "ℹ️"; font-size: 14px; }
+.form-status {
+  margin-top: 16px;
+  padding: 12px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 8px;
+  color: var(--em2);
+  font-size: 14px;
+  font-weight: 600;
+  display: none;
+  animation: fadeUp 0.4s var(--ease);
+}
+.form-status.show { display: block; }
+
+/* Footer */
+.footer { background: #070A0E; border-top: 1px solid var(--line); padding: 80px 0 30px; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; }
+.footer-brand p { color: var(--muted); font-size: 14px; max-width: 320px; margin-top: 20px; line-height: 1.7; }
+.footer-grid h4 {
+  font-family: var(--font-h);
+  color: var(--gold);
+  font-size: 14px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.footer-grid > div > a:not(.brand) {
+  display: block;
+  color: var(--muted);
+  font-size: 14px;
+  margin: 12px 0;
+  transition: 0.3s var(--ease);
+}
+.footer-grid > div > a:not(.brand):hover { color: var(--gold-soft); padding-left: 6px; }
+.footer-bottom {
+  border-top: 1px solid var(--line);
+  margin-top: 60px;
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* Back to Top */
+.back-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--gold), #D4941A);
+  color: #0B0E12;
+  border: 0;
+  border-radius: 14px;
+  font-size: 20px;
+  font-weight: 700;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: 0.4s var(--ease);
+  box-shadow: 0 10px 30px rgba(229, 160, 32, 0.3);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.back-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-top:hover { transform: translateY(-4px); box-shadow: 0 15px 40px rgba(229, 160, 32, 0.45); }
+
+/* Reveal Animation */
+.reveal { opacity: 0; transform: translateY(35px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-grid { gap: 40px; }
+}
+@media (max-width: 768px) {
+  .container { width: calc(100% - 32px); }
+  .menu-toggle { display: block; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: rgba(11, 14, 18, 0.98);
+    backdrop-filter: blur(20px);
+    padding: 20px 24px 28px;
+    flex-direction: column;
+    align-items: stretch;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    animation: slideDown 0.3s var(--ease);
+  }
+  @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+  .nav-links.active { display: flex; }
+  .nav-links a { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 15px; }
+  .nav-links .nav-contact { border: 0; padding: 14px; margin-top: 12px; text-align: center; border-radius: 10px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-card:nth-child(2) { border-right: 0; }
+  .stat-card:nth-child(1), .stat-card:nth-child(2) { border-bottom: 1px solid var(--line); }
+  .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .about-media { min-height: 340px; }
+  .corridor-grid { grid-template-columns: 1fr; }
+  .section { padding: 80px 0; }
+  .calculator-grid, .form-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 42px; }
+  .calculator-box { padding: 28px; }
+}
+@media (max-width: 480px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .hero-buttons { flex-direction: column; }
+  .btn { width: 100%; }
+  .brand-company { max-width: 180px; }
+  .brand-company strong { font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
 }
 </style>
 </head>
 <body>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress" id="scrollProgress"></div>
 
 <!-- LIVE MARKET TICKER -->
 <div class="ticker-bar" aria-label="Live market ticker">
@@ -252,7 +920,7 @@ img{max-width:100%}
 <header class="header site-header">
   <div class="container nav-container">
     <a href="#home" class="brand" aria-label="MAAT VERTEX BUSINESS PRIVATE LIMITED Home">
-      <img src="./maat-logo.png" onerror="this.src='https://placehold.co/150x58/04090f/e3b658?text=MAAT'" alt="MAAT VERTEX BUSINESS Logo" class="brand-logo" width="150" height="58" fetchpriority="high">
+      <img src="./maat-logo.png" onerror="this.src='https://placehold.co/140x54/0B0E12/E5A020?text=MAAT'" alt="MAAT VERTEX BUSINESS Logo" class="brand-logo" width="140" height="54" fetchpriority="high">
       <div class="brand-company">
         <strong>MAAT VERTEX BUSINESS<br>PRIVATE LIMITED</strong>
         <span>Global Trading &amp; Commerce</span>
@@ -273,8 +941,8 @@ img{max-width:100%}
 <main>
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="aurora a-em" style="width:480px;height:480px;top:-140px;right:-80px"></div>
-    <div class="aurora a-sky" style="width:360px;height:360px;bottom:-120px;left:20%"></div>
+    <div class="aurora a-gold" style="width:500px;height:500px;top:-100px;right:-100px"></div>
+    <div class="aurora a-em" style="width:400px;height:400px;bottom:-100px;left:10%"></div>
     <div class="container hero-content">
       <div class="hero-label">MAAT VERTEX BUSINESS PVT. LTD.</div>
       <h1>Global <span class="hl">Trading</span> &amp;<br>Import/Export Solutions.</h1>
@@ -289,6 +957,7 @@ img{max-width:100%}
 
   <!-- STATS -->
   <section class="stats-section">
+    <div class="aurora a-sky" style="width:300px;height:300px;top:50%;left:50%;transform:translate(-50%,-50%)"></div>
     <div class="container stats-grid">
       <div class="stat-card"><h2 class="count" data-target="10" data-suffix="+">0</h2><p>Years in Global Trade*</p></div>
       <div class="stat-card"><h2 class="count" data-target="500" data-suffix="+">0</h2><p>Shipments Coordinated*</p></div>
@@ -313,7 +982,7 @@ img{max-width:100%}
       </div>
       <div class="about-content reveal">
         <div class="section-label">WHO WE ARE</div>
-        <h2 class="section-title">A premier platform built for <span>global commerce.</span></h2>
+        <h2 class="section-title">A premier platform built for <span class="gold">global commerce.</span></h2>
         <p><strong>MAAT VERTEX BUSINESS PRIVATE LIMITED</strong> is an integrated trading platform focused on connecting commercial opportunities, international buyers, and verified suppliers.</p>
         <p>Our approach combines global market research, trade coordination, customs documentation support, and logistics execution to help businesses move goods across borders with clarity and confidence.</p>
         <ul class="check-list">
@@ -337,12 +1006,48 @@ img{max-width:100%}
         <p>Six interconnected verticals designed to support your complete commercial import and export requirements.</p>
       </div>
       <div class="services-grid">
-        <article class="service-card reveal"><div class="service-icon">🌐</div><span class="service-number">01</span><h3>Import &amp; Export Trading</h3><p>International trade coordination, global sourcing assistance, and market connectivity for diverse commodities.</p><a href="#contact">Discuss Trade Requirements →</a></article>
-        <article class="service-card reveal"><div class="service-icon">📦</div><span class="service-number">02</span><h3>Commodity Sourcing</h3><p>Domestic and international supplier verification, procurement support, and quality assurance coordination.</p><a href="#contact">Explore Sourcing →</a></article>
-        <article class="service-card reveal"><div class="service-icon">🤝</div><span class="service-number">03</span><h3>Trading &amp; Distribution</h3><p>Wholesale trading, supplier networks, procurement support and distribution partnerships across sectors.</p><a href="#contact">Explore Distribution →</a></article>
-        <article class="service-card reveal"><div class="service-icon">🚢</div><span class="service-number">04</span><h3>Trade Logistics</h3><p>Freight forwarding coordination, shipment planning, customs documentation assistance, and cargo tracking.</p><a href="#contact">Explore Logistics →</a></article>
-        <article class="service-card reveal"><div class="service-icon">📊</div><span class="service-number">05</span><h3>Trade Consulting</h3><p>Market entry strategy, HS code classification guidance, and international trade compliance advisory.</p><a href="#contact">Discuss Consulting →</a></article>
-        <article class="service-card reveal"><div class="service-icon">🏗️</div><span class="service-number">06</span><h3>Projects &amp; Investment Facilitation</h3><p>Project identification, feasibility discussions and business collaboration, subject to applicable laws.</p><a href="#contact">Explore Projects →</a></article>
+        <article class="service-card reveal">
+          <div class="service-icon">🌐</div>
+          <span class="service-number">01</span>
+          <h3>Import &amp; Export Trading</h3>
+          <p>International trade coordination, global sourcing assistance, and market connectivity for diverse commodities.</p>
+          <a href="#contact">Discuss Trade Requirements →</a>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-icon">📦</div>
+          <span class="service-number">02</span>
+          <h3>Commodity Sourcing</h3>
+          <p>Domestic and international supplier verification, procurement support, and quality assurance coordination.</p>
+          <a href="#contact">Explore Sourcing →</a>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-icon">🤝</div>
+          <span class="service-number">03</span>
+          <h3>Trading &amp; Distribution</h3>
+          <p>Wholesale trading, supplier networks, procurement support and distribution partnerships across sectors.</p>
+          <a href="#contact">Explore Distribution →</a>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-icon">🚢</div>
+          <span class="service-number">04</span>
+          <h3>Trade Logistics</h3>
+          <p>Freight forwarding coordination, shipment planning, customs documentation assistance, and cargo tracking.</p>
+          <a href="#contact">Explore Logistics →</a>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-icon">📊</div>
+          <span class="service-number">05</span>
+          <h3>Trade Consulting</h3>
+          <p>Market entry strategy, HS code classification guidance, and international trade compliance advisory.</p>
+          <a href="#contact">Discuss Consulting →</a>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-icon">🏗️</div>
+          <span class="service-number">06</span>
+          <h3>Projects &amp; Investment</h3>
+          <p>Project identification, feasibility discussions and business collaboration, subject to applicable laws.</p>
+          <a href="#contact">Explore Projects →</a>
+        </article>
       </div>
     </div>
   </section>
@@ -351,12 +1056,21 @@ img{max-width:100%}
   <section class="trade-section" id="markets">
     <div class="container trade-content reveal">
       <div class="section-label">GLOBAL TRADE CONNECTIVITY</div>
-      <h2 class="section-title">Connecting opportunities <span>across borders.</span></h2>
+      <h2 class="section-title">Connecting opportunities <span class="gold">across borders.</span></h2>
       <p>Supporting businesses with sourcing coordination, international trade requirements, commercial documentation assistance, and strategic logistics planning.</p>
       <div class="corridor-grid">
-        <div class="corridor-card"><strong>ASIA PACIFIC</strong><span>High-volume manufacturing &amp; agro trade</span></div>
-        <div class="corridor-card"><strong>MIDDLE EAST</strong><span>Strategic commercial trade connections</span></div>
-        <div class="corridor-card"><strong>AFRICA &amp; EU</strong><span>Emerging market &amp; specialized commodity opportunities</span></div>
+        <div class="corridor-card">
+          <strong>ASIA PACIFIC</strong>
+          <span>High-volume manufacturing &amp; agro trade corridors with established supplier networks.</span>
+        </div>
+        <div class="corridor-card">
+          <strong>MIDDLE EAST</strong>
+          <span>Strategic commercial trade connections facilitating energy, construction, and consumer goods.</span>
+        </div>
+        <div class="corridor-card">
+          <strong>AFRICA &amp; EU</strong>
+          <span>Emerging market access &amp; specialized commodity opportunities with regulatory compliance.</span>
+        </div>
       </div>
       <a href="#contact" class="btn btn-primary">Discuss International Trade ↗</a>
     </div>
@@ -368,27 +1082,53 @@ img{max-width:100%}
     <div class="container">
       <div class="section-heading center reveal">
         <div class="section-label">TRADING TOOLS</div>
-        <h2 class="section-title">Estimate your <span>Landed Trade Cost.</span></h2>
+        <h2 class="section-title">Estimate your <span class="gold">Landed Trade Cost.</span></h2>
         <p>Use this illustrative calculator to estimate the total landed cost of a trade transaction. It is not a formal quotation.</p>
       </div>
       <div class="calculator-box reveal">
         <div class="calculator-grid">
-          <div class="form-group"><label for="quantity">Quantity (Units)</label><input type="number" id="quantity" min="0" step="any" value="100"></div>
-          <div class="form-group"><label for="unitPrice">Unit Price (₹)</label><input type="number" id="unitPrice" min="0" step="any" value="500"></div>
-          <div class="form-group"><label for="dutyRate">Customs / Tax Rate (%)</label><input type="number" id="dutyRate" min="0" max="100" step="any" value="18"></div>
-          <div class="form-group"><label for="freightCost">Freight &amp; Other Costs (₹)</label><input type="number" id="freightCost" min="0" step="any" value="5000"></div>
+          <div class="form-group">
+            <label for="quantity">Quantity (Units)</label>
+            <input type="number" id="quantity" min="0" step="any" value="100">
+          </div>
+          <div class="form-group">
+            <label for="unitPrice">Unit Price (₹)</label>
+            <input type="number" id="unitPrice" min="0" step="any" value="500">
+          </div>
+          <div class="form-group">
+            <label for="dutyRate">Customs / Tax Rate (%)</label>
+            <input type="number" id="dutyRate" min="0" max="100" step="any" value="18">
+          </div>
+          <div class="form-group">
+            <label for="freightCost">Freight &amp; Other Costs (₹)</label>
+            <input type="number" id="freightCost" min="0" step="any" value="5000">
+          </div>
         </div>
         <button class="btn btn-primary" id="calculateButton" type="button" style="width:100%">Calculate Landed Cost</button>
+        
         <div class="calculator-result" aria-live="polite">
           <span>Estimated Total Landed Cost</span>
           <strong id="totalResult">₹64,000.00</strong>
+          
           <div id="calculationDetails">
             <div class="calculation-row"><span>Base Value</span><strong>₹50,000.00</strong></div>
             <div class="calculation-row"><span>Customs / Tax (18%)</span><strong>₹9,000.00</strong></div>
             <div class="calculation-row"><span>Freight &amp; Additional</span><strong>₹5,000.00</strong></div>
           </div>
+
+          <!-- Visual Cost Breakdown Bar -->
+          <div class="cost-bar-container" id="costBar">
+            <div class="cost-bar-segment cost-bar-base" style="width: 78.12%"></div>
+            <div class="cost-bar-segment cost-bar-duty" style="width: 14.06%"></div>
+            <div class="cost-bar-segment cost-bar-freight" style="width: 7.81%"></div>
+          </div>
+          <div class="cost-bar-legend">
+            <span><i style="background:var(--em)"></i> Base Value</span>
+            <span><i style="background:var(--gold)"></i> Customs / Tax</span>
+            <span><i style="background:var(--sky)"></i> Freight &amp; Additional</span>
+          </div>
         </div>
-        <p class="legal-note">This is a simple illustrative calculation. Actual customs duties, GST, freight fees and transaction costs may differ based on HS codes and current regulations.</p>
+        <p class="legal-note">This is a simple illustrative calculation. Actual customs duties, GST, freight fees and transaction costs may differ based on HS codes, Incoterms, and current regulations.</p>
       </div>
     </div>
   </section>
@@ -401,10 +1141,22 @@ img{max-width:100%}
         <h2 class="section-title">A few things you may <span>want to know.</span></h2>
       </div>
       <div class="faq-list reveal">
-        <details><summary>What trading services does MAAT VERTEX BUSINESS provide?</summary><p>Our core services include import &amp; export trading, commodity sourcing, trading &amp; distribution, trade logistics, trade consulting, and project/investment facilitation.</p></details>
-        <details><summary>Can businesses approach you for international trade?</summary><p>Yes. Contact us to discuss sourcing, trade coordination, documentation assistance and logistics requirements. Each engagement is subject to scope review and applicable laws.</p></details>
-        <details><summary>Do you directly provide regulated investment advice?</summary><p>No regulated investment advice is represented. We facilitate business discussions and share project information, subject to applicable laws and independent due diligence.</p></details>
-        <details><summary>How can I submit a trade enquiry?</summary><p>Use the contact form below. Your email application will open with your enquiry prepared — press Send to complete submission.</p></details>
+        <details>
+          <summary>What trading services does MAAT VERTEX BUSINESS provide?</summary>
+          <p>Our core services include import &amp; export trading, commodity sourcing, trading &amp; distribution, trade logistics, trade consulting, and project/investment facilitation.</p>
+        </details>
+        <details>
+          <summary>Can businesses approach you for international trade?</summary>
+          <p>Yes. Contact us to discuss sourcing, trade coordination, documentation assistance and logistics requirements. Each engagement is subject to scope review and applicable laws.</p>
+        </details>
+        <details>
+          <summary>Do you directly provide regulated investment advice?</summary>
+          <p>No regulated investment advice is represented. We facilitate business discussions and share project information, subject to applicable laws and independent due diligence.</p>
+        </details>
+        <details>
+          <summary>How can I submit a trade enquiry?</summary>
+          <p>Use the contact form below. Your email application will open with your enquiry prepared — press Send in your email client to complete submission.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -414,33 +1166,70 @@ img{max-width:100%}
     <div class="container">
       <div class="section-heading center reveal">
         <div class="section-label">CONTACT OUR TRADE DESK</div>
-        <h2 class="section-title">Let's discuss your <span>next trade opportunity.</span></h2>
+        <h2 class="section-title">Let's discuss your <span class="gold">next trade opportunity.</span></h2>
         <p>Share your sourcing or export requirement and start a conversation with MAAT VERTEX BUSINESS PRIVATE LIMITED.</p>
       </div>
       <div class="contact-grid reveal">
         <aside class="contact-info">
           <h3>Connect with our trade team.</h3>
           <p>For import/export enquiries, commodity sourcing, or logistics coordination, contact MAAT VERTEX BUSINESS PRIVATE LIMITED.</p>
-          <div class="contact-line"><b>REGISTERED COMPANY</b>MAAT VERTEX BUSINESS PRIVATE LIMITED</div>
-          <div class="contact-line"><b>LOCATION</b>Hyderabad, Telangana, India</div>
-          <div class="contact-line"><b>EMAIL</b><a href="mailto:maatglobalbusinessvertex@gmail.com">maatglobalbusinessvertex@gmail.com</a></div>
-          <div class="contact-line"><b>PHONE</b><span>Contact details to be updated</span></div>
-          <div class="contact-line"><b>BUSINESS HOURS</b>Monday – Saturday · By appointment</div>
+          <div class="contact-line">
+            <b>REGISTERED COMPANY</b>
+            MAAT VERTEX BUSINESS PRIVATE LIMITED
+          </div>
+          <div class="contact-line">
+            <b>LOCATION</b>
+            Hyderabad, Telangana, India
+          </div>
+          <div class="contact-line">
+            <b>EMAIL</b>
+            <a href="mailto:maatglobalbusinessvertex@gmail.com">maatglobalbusinessvertex@gmail.com</a>
+          </div>
+          <div class="contact-line">
+            <b>PHONE</b>
+            <span>Contact details to be updated</span>
+          </div>
+          <div class="contact-line">
+            <b>BUSINESS HOURS</b>
+            Monday – Saturday · By appointment
+          </div>
         </aside>
         <form class="contact-form" id="contactForm">
           <div class="form-grid">
-            <div class="field"><label for="fullName">Full Name *</label><input id="fullName" name="name" required maxlength="100" placeholder="Enter your name"></div>
-            <div class="field"><label for="company">Company Name</label><input id="company" name="company" maxlength="150" placeholder="Your organisation"></div>
-            <div class="field"><label for="email">Email Address *</label><input id="email" name="email" type="email" required maxlength="150" placeholder="name@company.com"></div>
-            <div class="field"><label for="phone">Phone Number</label><input id="phone" name="phone" type="tel" maxlength="30" placeholder="+91"></div>
-            <div class="field full"><label for="service">Service Required</label>
+            <div class="field">
+              <label for="fullName">Full Name *</label>
+              <input id="fullName" name="name" required maxlength="100" placeholder="Enter your name">
+            </div>
+            <div class="field">
+              <label for="company">Company Name</label>
+              <input id="company" name="company" maxlength="150" placeholder="Your organisation">
+            </div>
+            <div class="field">
+              <label for="email">Email Address *</label>
+              <input id="email" name="email" type="email" required maxlength="150" placeholder="name@company.com">
+            </div>
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" maxlength="30" placeholder="+91">
+            </div>
+            <div class="field full">
+              <label for="service">Service Required</label>
               <select id="service" name="service">
-                <option>Import &amp; Export Trading</option><option>Commodity Sourcing</option><option>Trading &amp; Distribution</option><option>Trade Logistics</option><option>Trade Consulting</option><option>Projects &amp; Investment Facilitation</option><option>Other</option>
+                <option>Import &amp; Export Trading</option>
+                <option>Commodity Sourcing</option>
+                <option>Trading &amp; Distribution</option>
+                <option>Trade Logistics</option>
+                <option>Trade Consulting</option>
+                <option>Projects &amp; Investment Facilitation</option>
+                <option>Other</option>
               </select>
             </div>
-            <div class="field full"><label for="message">Your Trade Requirement *</label><textarea id="message" name="message" required maxlength="5000" placeholder="Briefly describe the commodity, quantity, and origin/destination..."></textarea></div>
             <div class="field full">
-              <button class="btn btn-primary" type="submit" style="width:100%">Submit Trade Enquiry ↗</button>
+              <label for="message">Your Trade Requirement *</label>
+              <textarea id="message" name="message" required maxlength="5000" placeholder="Briefly describe the commodity, quantity, and origin/destination..."></textarea>
+            </div>
+            <div class="field full">
+              <button class="btn btn-primary" type="submit" style="width:100%" id="submitBtn">Submit Trade Enquiry ↗</button>
               <p class="form-note">Your email application will open with your enquiry prepared. Press Send to complete submission.</p>
               <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
             </div>
@@ -457,7 +1246,7 @@ img{max-width:100%}
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="#home" class="brand" aria-label="MAAT VERTEX BUSINESS PRIVATE LIMITED Home">
-          <img src="./maat-logo.png" onerror="this.src='https://placehold.co/150x58/02060b/e3b658?text=MAAT'" alt="MAAT VERTEX BUSINESS Logo" class="brand-logo" loading="lazy">
+          <img src="./maat-logo.png" onerror="this.src='https://placehold.co/140x54/070A0E/E5A020?text=MAAT'" alt="MAAT VERTEX BUSINESS Logo" class="brand-logo" loading="lazy">
           <div class="brand-company">
             <strong>MAAT VERTEX BUSINESS<br>PRIVATE LIMITED</strong>
             <span>Global Trading &amp; Commerce</span>
@@ -465,9 +1254,27 @@ img{max-width:100%}
         </a>
         <p>Connecting opportunities, businesses, and global markets through integrated trading and supply chain solutions.</p>
       </div>
-      <div><h4>Quick Links</h4><a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Trading Services</a><a href="#calculator">Trade Calculator</a><a href="#contact">Contact Us</a></div>
-      <div><h4>Trading Verticals</h4><a href="#services">Import &amp; Export</a><a href="#services">Commodity Sourcing</a><a href="#services">Trading &amp; Distribution</a><a href="#services">Trade Logistics</a><a href="#services">Trade Consulting</a></div>
-      <div><h4>Get in Touch</h4><a href="#contact">Contact Trade Desk</a><a href="mailto:maatglobalbusinessvertex@gmail.com">Email the Team</a></div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Trading Services</a>
+        <a href="#calculator">Trade Calculator</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+      <div>
+        <h4>Trading Verticals</h4>
+        <a href="#services">Import &amp; Export</a>
+        <a href="#services">Commodity Sourcing</a>
+        <a href="#services">Trading &amp; Distribution</a>
+        <a href="#services">Trade Logistics</a>
+        <a href="#services">Trade Consulting</a>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <a href="#contact">Contact Trade Desk</a>
+        <a href="mailto:maatglobalbusinessvertex@gmail.com">Email the Team</a>
+      </div>
     </div>
     <div class="footer-bottom">
       <span>© <span id="currentYear"></span> MAAT VERTEX BUSINESS PRIVATE LIMITED. All rights reserved.</span>
@@ -480,7 +1287,7 @@ img{max-width:100%}
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-
+  // 1. Live Market Ticker
   const markets = [
     {n:"GOLD",v:"₹71,250",d:"+0.42%",up:true},
     {n:"SILVER",v:"₹88,410",d:"-0.18%",up:false},
@@ -495,6 +1302,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const line = markets.map(m => `<span class="tick"><b>${m.n}</b> ${m.v} <span class="${m.up?'up':'down'}">${m.up?'▲':'▼'} ${m.d}</span></span>`).join("");
   track.innerHTML = line + line;
 
+  // 2. Mobile Menu Toggle
   const menuToggle = document.getElementById("menuToggle");
   const navLinks = document.getElementById("navLinks");
   menuToggle.addEventListener("click", () => {
@@ -503,14 +1311,17 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggle.textContent = open ? "×" : "☰";
   });
   navLinks.querySelectorAll("a").forEach(l => l.addEventListener("click", () => {
-    navLinks.classList.remove("active"); menuToggle.textContent = "☰";
+    navLinks.classList.remove("active"); 
+    menuToggle.textContent = "☰";
+    menuToggle.setAttribute("aria-expanded", "false");
   }));
 
+  // 3. Animated Counters
   const countObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach(e => {
       if (!e.isIntersecting) return;
       const el = e.target, target = +el.dataset.target, suffix = el.dataset.suffix || "", pad = +(el.dataset.pad || 0);
-      const dur = 1600, start = performance.now();
+      const dur = 1800, start = performance.now();
       const tick = now => {
         const p = Math.min((now - start) / dur, 1);
         const val = Math.floor((1 - Math.pow(1 - p, 3)) * target);
@@ -523,58 +1334,138 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0.5 });
   document.querySelectorAll(".count").forEach(c => countObserver.observe(c));
 
+  // 4. Advanced Trade Calculator with Visual Bar
   const fmt = new Intl.NumberFormat("en-IN", { style:"currency", currency:"INR", minimumFractionDigits:2, maximumFractionDigits:2 });
-  document.getElementById("calculateButton").addEventListener("click", () => {
+  const calculate = () => {
     const qty = +document.getElementById("quantity").value;
     const price = +document.getElementById("unitPrice").value;
     const duty = +document.getElementById("dutyRate").value;
     const freight = +document.getElementById("freightCost").value;
-    const totalEl = document.getElementById("totalResult"), detEl = document.getElementById("calculationDetails");
+    const totalEl = document.getElementById("totalResult");
+    const detEl = document.getElementById("calculationDetails");
+    
     if ([qty, price, duty, freight].some(v => !Number.isFinite(v) || v < 0) || qty <= 0 || duty > 100) {
       totalEl.textContent = "Enter valid values";
       detEl.innerHTML = '<div class="calculation-row"><span>Please enter valid non-negative numbers (quantity &gt; 0, tax ≤ 100%).</span></div>';
+      document.getElementById("costBar").style.display = 'none';
       return;
     }
-    const base = qty * price, dutyAmt = base * duty / 100, total = base + dutyAmt + freight;
+    
+    const base = qty * price;
+    const dutyAmt = base * duty / 100;
+    const total = base + dutyAmt + freight;
+    
     totalEl.textContent = fmt.format(total);
-    totalEl.style.transform = "scale(1.06)";
+    totalEl.style.transform = "scale(1.05)";
     setTimeout(() => totalEl.style.transform = "scale(1)", 300);
+    
     detEl.innerHTML = `
       <div class="calculation-row"><span>Base Value</span><strong>${fmt.format(base)}</strong></div>
       <div class="calculation-row"><span>Customs / Tax (${duty}%)</span><strong>${fmt.format(dutyAmt)}</strong></div>
       <div class="calculation-row"><span>Freight &amp; Additional</span><strong>${fmt.format(freight)}</strong></div>
       <div class="calculation-row calculation-total"><span>Estimated Total</span><strong>${fmt.format(total)}</strong></div>`;
+    
+    // Update visual bar
+    const pBase = (base / total) * 100;
+    const pDuty = (dutyAmt / total) * 100;
+    const pFreight = (freight / total) * 100;
+    
+    document.getElementById("costBar").style.display = 'flex';
+    document.querySelector(".cost-bar-base").style.width = `${pBase}%`;
+    document.querySelector(".cost-bar-duty").style.width = `${pDuty}%`;
+    document.querySelector(".cost-bar-freight").style.width = `${pFreight}%`;
+  };
+  
+  document.getElementById("calculateButton").addEventListener("click", calculate);
+  // Auto-calculate on input change for better UX
+  ['quantity', 'unitPrice', 'dutyRate', 'freightCost'].forEach(id => {
+    document.getElementById(id).addEventListener('input', calculate);
   });
+  calculate(); // Initial run
 
+  // 5. Contact Form Handling with UX Feedback
   document.getElementById("contactForm").addEventListener("submit", e => {
     e.preventDefault();
     const f = e.target;
     if (!f.checkValidity()) { f.reportValidity(); return; }
-    const fd = new FormData(f);
-    const subject = encodeURIComponent(`Trade Enquiry from ${fd.get("name")}`);
-    const body = encodeURIComponent(`MAAT VERTEX BUSINESS PRIVATE LIMITED – TRADE ENQUIRY\n\nName: ${fd.get("name")}\nCompany: ${fd.get("company")}\nEmail: ${fd.get("email")}\nPhone: ${fd.get("phone")}\nService: ${fd.get("service")}\n\nMessage:\n${fd.get("message")}`);
-    document.getElementById("formStatus").textContent = "Your email application is being opened. Please press Send.";
-    window.location.href = `mailto:maatglobalbusinessvertex@gmail.com?subject=${subject}&body=${body}`;
+    
+    const btn = document.getElementById("submitBtn");
+    const status = document.getElementById("formStatus");
+    const originalText = btn.textContent;
+    
+    // Simulate processing
+    btn.textContent = "Preparing Enquiry...";
+    btn.disabled = true;
+    btn.style.opacity = "0.7";
+    
+    setTimeout(() => {
+      const fd = new FormData(f);
+      const subject = encodeURIComponent(`Trade Enquiry from ${fd.get("name")}`);
+      const body = encodeURIComponent(`MAAT VERTEX BUSINESS PRIVATE LIMITED – TRADE ENQUIRY\n\nName: ${fd.get("name")}\nCompany: ${fd.get("company")}\nEmail: ${fd.get("email")}\nPhone: ${fd.get("phone")}\nService: ${fd.get("service")}\n\nMessage:\n${fd.get("message")}`);
+      
+      status.textContent = "✓ Email client opened. Please press 'Send' in your email app to complete.";
+      status.classList.add("show");
+      
+      window.location.href = `mailto:maatglobalbusinessvertex@gmail.com?subject=${subject}&body=${body}`;
+      
+      btn.textContent = originalText;
+      btn.disabled = false;
+      btn.style.opacity = "1";
+      
+      setTimeout(() => status.classList.remove("show"), 8000);
+    }, 800);
   });
 
+  // 6. FAQ Accordion (Close others when one opens)
   const faqs = document.querySelectorAll(".faq-list details");
-  faqs.forEach(d => d.addEventListener("toggle", () => { if (d.open) faqs.forEach(o => { if (o !== d) o.open = false; }); }));
+  faqs.forEach(d => d.addEventListener("toggle", () => { 
+    if (d.open) faqs.forEach(o => { if (o !== d) o.open = false; }); 
+  }));
 
+  // 7. Scroll Reveal Animations
   const ro = new IntersectionObserver((entries, obs) => {
     entries.forEach((e, i) => {
-      if (e.isIntersecting) { setTimeout(() => e.target.classList.add("visible"), i * 90); obs.unobserve(e.target); }
+      if (e.isIntersecting) { 
+        setTimeout(() => e.target.classList.add("visible"), i * 80); 
+        obs.unobserve(e.target); 
+      }
     });
-  }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+  }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
   document.querySelectorAll(".reveal").forEach(el => ro.observe(el));
 
-  const header = document.querySelector(".site-header"), btt = document.getElementById("backToTop");
+  // 8. Header Scroll Effect & Back to Top & Progress Bar
+  const header = document.querySelector(".site-header");
+  const btt = document.getElementById("backToTop");
+  const progressBar = document.getElementById("scrollProgress");
+  
   window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollY / docHeight) * 100;
+    
     header.classList.toggle("scrolled", scrollY > 30);
-    btt.classList.toggle("show", scrollY > 450);
+    btt.classList.toggle("show", scrollY > 500);
+    progressBar.style.width = `${scrollPercent}%`;
   }, { passive: true });
+  
   btt.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
+  // 9. Dynamic Year
   document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+  // 10. Subtle Hero Mouse Parallax (Premium feel)
+  const hero = document.querySelector('.hero');
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    hero.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 20;
+      const y = (e.clientY / window.innerHeight - 0.5) * 20;
+      const auroras = hero.querySelectorAll('.aurora');
+      auroras.forEach((a, i) => {
+        const speed = (i + 1) * 0.5;
+        a.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+      });
+    });
+  }
 });
 </script>
 </body>
